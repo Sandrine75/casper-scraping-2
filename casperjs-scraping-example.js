@@ -1,4 +1,5 @@
 // Usage: casperjs --ssl-protocol=any --engine=slimerjs paypal.js
+// Open in browser: http://localhost:8083/get
 
 var email = '',
   password = '';
