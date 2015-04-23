@@ -13,10 +13,10 @@ var casper = require('casper').create({
 webserverTest.listen(8083, function(request, response) {
   if (request.url == '/get') {
     casper.start();
-    casper.userAgent('Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)');
+    casper.userAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36');
 
-    casper.thenOpen('https://www.paypal.com/signin', function() {
-      this.fill('form[action="/signin"]', {
+    casper.thenOpen('https://www.paypal.com/signin/', function() {
+      this.fill('form', {
         'email': email,
         'password': password
       }, true);
